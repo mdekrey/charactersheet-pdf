@@ -1,0 +1,22 @@
+{
+  "name": "charactersheet-pdf",
+  "version": "0.0.1",
+  "description": "",
+  "bin": {},
+  "scripts": {
+    "generate-pdf": "ts-node src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "pdf-lib": "^1.17.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "yaml": "^2.3.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.4"
+  }
+}
