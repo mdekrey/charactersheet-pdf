@@ -20,34 +20,18 @@ module.exports = {
 	},
 	overrides: [
 		{
-			files: ['**/*.{ts}'],
+			files: ['**/*.{ts,mts,cts}'],
 			extends: [
 				// Recommended typescript changes, which removes some "no-undef" checks that TS handles
 				'plugin:@typescript-eslint/eslint-recommended',
 				'plugin:@typescript-eslint/recommended-requiring-type-checking',
 				'plugin:@typescript-eslint/recommended',
 			],
-			parserOptions: {
-				ecmaVersion: 'latest',
-				sourceType: 'module',
-				project: './tsconfig.node.json',
-				tsconfigRootDir: __dirname,
-			},
-			rules: {
-				'@typescript-eslint/consistent-type-imports': [
-					'error',
-					{
-						disallowTypeAnnotations: false,
-					},
-				],
-				// no-unsafe-assignment complains when passing components as variables
-				'@typescript-eslint/no-unsafe-assignment': [0],
-			},
 		},
 		{
 			plugins: ['@typescript-eslint'],
 			extends: [],
-			files: ['src/**/*.{ts}'],
+			files: ['src/**/*.{ts,mts,cts}'],
 			parserOptions: {
 				project: './tsconfig.json',
 				tsconfigRootDir: __dirname,

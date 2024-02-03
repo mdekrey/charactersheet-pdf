@@ -1,6 +1,12 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@commander-js/extra-typings':
+    specifier: ^11.1.0
+    version: 11.1.0(commander@11.1.0)
+  '@types/node':
+    specifier: ^20.11.16
+    version: 20.11.16
   commander:
     specifier: ^11.1.0
     version: 11.1.0
@@ -43,6 +49,14 @@ packages:
     resolution: {integrity: sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /@commander-js/extra-typings@11.1.0(commander@11.1.0):
+    resolution: {integrity: sha512-GuvZ38d23H+7Tz2C9DhzCepivsOsky03s5NI+KCy7ke1FNUvsJ2oO47scQ9YaGGhgjgNW5OYYNSADmbjcSoIhw==}
+    peerDependencies:
+      commander: 11.1.x
+    dependencies:
+      commander: 11.1.0
+    dev: false
 
   /@cspotcode/source-map-support@0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}

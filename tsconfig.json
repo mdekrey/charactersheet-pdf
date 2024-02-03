@@ -3,7 +3,7 @@
 	"compilerOptions": {
 		"target": "ES2020",
 		"useDefineForClassFields": true,
-		"lib": ["ESNext", "DOM", "DOM.Iterable", "WebWorker"],
+		"lib": ["ESNext"],
 		"module": "ESNext",
 		"skipLibCheck": true,
 		"outDir": "dist",
@@ -23,6 +23,8 @@
 		"noUnusedLocals": false,
 		"noUnusedParameters": false,
 		"noFallthroughCasesInSwitch": true,
+
+		"types": ["@types/node"],
 	},
 	"include": ["src"],
 	"references": [],

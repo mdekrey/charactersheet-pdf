@@ -1,3 +1,11 @@
 {
-	"editor.insertSpaces": false
+	"editor.insertSpaces": false,
+	"eslint.validate": [
+		"javascript",
+		"typescript" // Enable .ts
+	],
+	"[typescript]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }
