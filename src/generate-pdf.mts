@@ -4,16 +4,19 @@ import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
 import { loadSystemYaml } from './configuration/game-system.mjs';
 import { loadTemplateYaml } from './configuration/template.mjs';
 import { constructRelativePath } from './paths.mjs';
+import { addPdfDebugging } from './addPdfDebugging.mjs';
 
 export async function generatePdf({
 	system,
 	template: templateKey,
 	character,
+	debug,
 	output,
 }: {
 	system: string;
 	template?: string | undefined;
 	character?: string | undefined;
+	debug?: true | undefined;
 	output: string;
 }) {
 	const gameSystem = await loadSystemYaml(system);
@@ -36,6 +39,10 @@ export async function generatePdf({
 	const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
 	const pages = pdfDoc.getPages();
+	if (debug) {
+		addPdfDebugging(pages, helveticaFont);
+	}
+
 	const firstPage = pages[0];
 	firstPage.drawText(character ?? 'no character', {
 		x: 5,

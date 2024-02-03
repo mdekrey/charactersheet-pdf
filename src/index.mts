@@ -16,8 +16,8 @@ program
 	.option('-t, --template <name>', 'template')
 	.option('-c, --character <name>', 'pregen character')
 	.option('-o, --output <path>', 'output path', './result.pdf')
+	.option('-d, --debug', 'add debug info')
 	.action(async (options) => {
-		console.log(options);
 		await generatePdf({
 			...options,
 			output: join(process.cwd(), options.output),
