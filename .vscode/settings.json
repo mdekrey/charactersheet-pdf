@@ -4,6 +4,12 @@
 		"javascript",
 		"typescript" // Enable .ts
 	],
+	"eslint.rules.customizations": [
+		{
+			"rule": "*",
+			"severity": "warn"
+		}
+	],
 	"[typescript]": {
 		"editor.formatOnSave": true,
 		"editor.defaultFormatter": "esbenp.prettier-vscode"

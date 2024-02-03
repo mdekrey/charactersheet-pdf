@@ -12,15 +12,16 @@ program
 program
 	.command('generate')
 	.description('Generate a character sheet')
-	.option('-s, --system <name>', 'system name', 'weg-sw')
+	.option('-s, --system <name>', 'system name', 'sw-weg')
 	.option('-t, --template <name>', 'template')
 	.option('-c, --character <name>', 'pregen character')
 	.option('-o, --output <path>', 'output path', './result.pdf')
-	.action((options) => {
-		generatePdf({
+	.action(async (options) => {
+		console.log(options);
+		await generatePdf({
 			...options,
 			output: join(process.cwd(), options.output),
 		});
 	});
 
-program.parse();
+await program.parseAsync();

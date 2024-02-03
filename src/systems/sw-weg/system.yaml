@@ -1,0 +1,4 @@
+defaultTemplate: character
+templates:
+  character:
+    path: templates/character.yaml

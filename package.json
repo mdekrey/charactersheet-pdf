@@ -4,7 +4,7 @@
 	"description": "",
 	"bin": {},
 	"scripts": {
-		"generate-pdf": "ts-node --esm src/index.mts generate",
+		"generate-pdf": "tsx src/index.mts generate",
 		"lint": "npm run typecheck && npm run eslint && npm run prettier",
 		"lint:fix": "npm run typecheck && npm run eslint:fix && npm run prettier:fix",
 		"eslint": "eslint \"**/*.{cjs,mjs,js,ts,tsx,mts,cts}\"",
@@ -21,7 +21,7 @@
 		"commander": "^11.1.0",
 		"lefthook": "^1.6.1",
 		"pdf-lib": "^1.17.1",
-		"ts-node": "^10.9.2",
+		"tsx": "^4.7.0",
 		"typescript": "^5.3.3",
 		"yaml": "^2.3.4"
 	},
