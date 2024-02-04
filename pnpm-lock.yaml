@@ -7,6 +7,9 @@ dependencies:
   '@types/node':
     specifier: ^20.11.16
     version: 20.11.16
+  change-case:
+    specifier: ^5.4.2
+    version: 5.4.2
   commander:
     specifier: ^11.1.0
     version: 11.1.0
@@ -585,6 +588,10 @@ packages:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
     dev: true
+
+  /change-case@5.4.2:
+    resolution: {integrity: sha512-WB3UiTDpT+vrTilAWaJS4gaIH/jc1He4H9f6erQvraUYas90uWT0JOYFkG1imdNv710XJ6gJvqynrgOHc4ihDA==}
+    dev: false
 
   /color-convert@2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}

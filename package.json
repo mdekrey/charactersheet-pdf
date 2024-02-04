@@ -18,6 +18,7 @@
 	"dependencies": {
 		"@commander-js/extra-typings": "^11.1.0",
 		"@types/node": "^20.11.16",
+		"change-case": "^5.4.2",
 		"commander": "^11.1.0",
 		"lefthook": "^1.6.1",
 		"pdf-lib": "^1.17.1",

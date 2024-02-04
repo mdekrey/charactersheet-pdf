@@ -1,15 +1,17 @@
 import { InvalidArgumentError } from '@commander-js/extra-typings';
 import { readFile, writeFile } from 'node:fs/promises';
-import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
+import { PDFDocument, StandardFonts } from 'pdf-lib';
 import { loadSystemYaml } from './configuration/game-system.mjs';
 import { loadTemplateYaml } from './configuration/template.mjs';
 import { constructRelativePath } from './paths.mjs';
 import { addPdfDebugging } from './addPdfDebugging.mjs';
+import { loadCharacterSpec } from './configuration/character.mjs';
+import { addCharacter } from './pdf/addCharacter.mjs';
 
 export async function generatePdf({
 	system,
 	template: templateKey,
-	character,
+	character: characterName,
 	debug,
 	output,
 }: {
@@ -31,26 +33,27 @@ export async function generatePdf({
 		throw new InvalidArgumentError(
 			`Unable to locate template at: ${template.path}`,
 		);
+	const character = characterName
+		? await loadCharacterSpec(system, characterName)
+		: null;
+	if (characterName && !character?.spec)
+		throw new InvalidArgumentError(
+			`Unable to locate character named '${characterName}' for ${system}`,
+		);
 
 	const initialPdfBytes = await readFile(
 		constructRelativePath(template.path, template.spec.blankSheet),
 	);
 	const pdfDoc = await PDFDocument.load(initialPdfBytes);
-	const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
+	const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
 	const pages = pdfDoc.getPages();
 	if (debug) {
-		addPdfDebugging(pages, helveticaFont);
+		addPdfDebugging(pages, font);
 	}
 
-	const firstPage = pages[0];
-	firstPage.drawText(character ?? 'no character', {
-		x: 5,
-		y: 5,
-		size: 50,
-		font: helveticaFont,
-		color: rgb(0.95, 0.1, 0.1),
-	});
+	if (character?.spec)
+		addCharacter(pages, { template: template.spec, character, debug, font });
 
 	const resultBytes = await pdfDoc.save();
 	return writeFile(output, resultBytes);
