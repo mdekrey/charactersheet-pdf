@@ -1,1 +1,82 @@
 blankSheet: ./character-sheet.pdf
+pages:
+- instructions:
+  - label: Character Template
+    type: text
+    data: $.template
+    parameters:
+      x: 3.62
+      y: 9.989
+      width: 1.64
+      size: 12
+  - label: Name
+    type: text
+    data: $.name
+    parameters:
+      x: 3.71
+      y: 9.8
+      width: 1.55
+      size: 12
+  - label: Player
+    type: text
+    data: $.player
+    parameters:
+      x: 3.09
+      y: 9.611
+      width: 2.17
+      size: 12
+  - label: Species
+    type: text
+    data: $.species
+    parameters:
+      x: 3.16
+      y: 9.422
+      width: 2.1
+      size: 12
+  - label: Sex
+    type: text
+    data: $.sex
+    parameters:
+      x: 2.93
+      y: 9.233
+      width: 0.2
+      size: 12
+      align: center
+  - label: Age
+    type: text
+    data: $.age
+    parameters:
+      x: 3.47
+      y: 9.233
+      width: 0.34
+      size: 12
+      align: center
+  - label: Height
+    type: text
+    data: $.height
+    parameters:
+      x: 4.30
+      y: 9.233
+      width: 0.20
+      size: 12
+      align: center
+  - label: Weight
+    type: text
+    data: $.weight
+    parameters:
+      x: 5.01
+      y: 9.233
+      width: 0.25
+      size: 12
+      align: center
+  - label: Phsyical Description
+    type: text
+    data: $.physicalDescription
+    parameters:
+      x: 2.68
+      y: 9.044
+      width: 2.58
+      size: 12
+      maxLines: 5
+      lineHeight: 0.189
+      firstLineIndent: 1.25

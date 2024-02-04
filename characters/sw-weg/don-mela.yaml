@@ -1,19 +1,20 @@
 template: Computer Slicer
 name: Don Mela
+# player: null
 species: Human
-sex: M
+# sex: M
 age: 22
-height: 1.7m
-weight: 55kg
+height: 1.7
+weight: 55
 physicalDescription: >-
-  Don is a little guy; short and scrawny, with cropped dark hair. He wears a
-  simple padded vest that has a number of tools inside.
+  Don is tiny: short and scrawny with long dark hair pulled back loosely. Don
+  wears a simple padded vest that has a number of tools inside.
 background: >-
-  Don has been in the Rebellion a long time, but he usually finds himself with
+  Don has been in the Rebellion a long time but usually ends up with
   unpredictable groups and has rarely been part of a mission going successfully.
 personality: >-
-  Don is overly confident about his technical skills, and usually cannot keep
-  his mouth shut when pointing out others' mistakes.
+  Don is boistrous and confident with technical skills and frequently calls out
+  others' mistakes.
 objectives: >-
   For a mission to go smoothly, just this once.
 quote: >-

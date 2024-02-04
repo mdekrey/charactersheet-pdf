@@ -15,6 +15,22 @@ export type Template = {
 
 export type TemplateSpec = {
 	blankSheet: string;
+	pages: TemplatePage[];
+};
+
+export type TemplatePage = {
+	label?: string;
+	instructions: TemplateInstruction[];
+};
+
+export type TemplateInstruction = {
+	label?: string;
+	/** component type key */
+	type: string;
+	/** JS evaluation value */
+	data: string;
+	/** Parameters for the component */
+	parameters: unknown;
 };
 
 export async function loadTemplateYaml(
