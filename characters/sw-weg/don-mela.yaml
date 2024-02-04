@@ -11,7 +11,10 @@ physicalDescription: >-
   wears a simple padded vest that has a number of tools inside.
 background: >-
   Don has been in the Rebellion a long time but usually ends up with
-  unpredictable groups and has rarely been part of a mission going successfully.
+  unpredictable groups and has rarely been part of a mission going well. He's
+  overloaded a Star Destroyer's reactor (but severely damaged their own ship and
+  failed to rescue their target), ruined a TIE fighter production facility (but
+  exposed the rebel cell), and many others.
 personality: >-
   Don is boistrous and confident with technical skills and frequently calls out
   others' mistakes.
@@ -19,8 +22,8 @@ objectives: >-
   For a mission to go smoothly, just this once.
 quote: >-
   It's not my fault!
-connections: >-
-  TODO
+# connections: >-
+#   TODO
 abilities:
   dexterity:
     score: 2D+2

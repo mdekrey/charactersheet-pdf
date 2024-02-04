@@ -5,33 +5,37 @@ pages:
     type: text
     data: $.template
     parameters:
-      x: 3.62
+      x: 2.68
+      width: 2.58
+      indents: [0.94]
       y: 9.989
-      width: 1.64
       size: 12
   - label: Name
     type: text
     data: $.name
     parameters:
-      x: 3.71
+      x: 2.68
+      width: 2.58
+      indents: [1.03]
       y: 9.8
-      width: 1.55
       size: 12
   - label: Player
     type: text
     data: $.player
     parameters:
-      x: 3.09
+      x: 2.68
+      width: 2.58
+      indents: [0.41]
       y: 9.611
-      width: 2.17
       size: 12
   - label: Species
     type: text
     data: $.species
     parameters:
-      x: 3.16
+      x: 2.68
+      width: 2.58
+      indents: [0.48]
       y: 9.422
-      width: 2.1
       size: 12
   - label: Sex
     type: text
@@ -74,9 +78,65 @@ pages:
     data: $.physicalDescription
     parameters:
       x: 2.68
-      y: 9.044
+      y: 9.05
       width: 2.58
       size: 12
       maxLines: 5
-      lineHeight: 0.189
-      firstLineIndent: 1.25
+      lineHeight: 0.1885
+      indents: [1.25]
+  - label: Background
+    type: text
+    data: $.background
+    parameters:
+      x: 1.18
+      y: 8.104
+      width: 4.08
+      size: 12
+      maxLines: 8
+      lineHeight: 0.188
+      indents: [2.29, 1.5, 1.5]
+  - label: Personality
+    type: text
+    data: $.personality
+    parameters:
+      x: 5.34
+      y: 10
+      width: 2.33
+      size: 12
+      maxLines: 8
+      lineHeight: 0.1885
+      indents: [0.72]
+  - label: Objectives
+    type: text
+    data: $.objectives
+    parameters:
+      x: 5.34
+      y: 8.488
+      width: 2.33
+      size: 12
+      maxLines: 4
+      lineHeight: 0.1885
+      indents: [0.68]
+  - label: Quote
+    type: text
+    data: $.quote
+    parameters:
+      x: 5.34
+      y: 7.73
+      width: 2.33
+      size: 12
+      maxLines: 3
+      lineHeight: 0.1885
+      indents: [0.58]
+  - label: Connections
+    type: text
+    data: $.connections
+    parameters:
+      x: 5.34
+      y: 6.98
+      width: 2.33
+      size: 12
+      maxLines: 2
+      lineHeight: 0.1885
+      indents: []
+

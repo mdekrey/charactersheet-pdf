@@ -24,23 +24,14 @@ export const text: PDFComponent<
 		size: number;
 		lineHeight?: number;
 		maxLines?: number;
-		firstLineIndent?: number;
+		indents?: number[];
 		align?: keyof typeof calcAlignment;
 	},
 	string
 > = (
 	page,
 	data,
-	{
-		x,
-		y,
-		width,
-		size,
-		lineHeight,
-		maxLines = 1,
-		align = 'left',
-		firstLineIndent = 0,
-	},
+	{ x, y, width, size, lineHeight, maxLines = 1, align = 'left', indents = [] },
 	{ font },
 	{ debug },
 ) => {
@@ -49,7 +40,7 @@ export const text: PDFComponent<
 	if (debug) {
 		for (let line = 0; line < maxLines; line++) {
 			const lineY = y - line * lineHeight;
-			const lineX = line === 0 ? x + firstLineIndent : x;
+			const lineX = x + (indents[line] ?? 0);
 			page.drawLine({
 				start: { x: lineX * ptsPerInch, y: lineY * ptsPerInch },
 				end: { x: (x + width) * ptsPerInch, y: lineY * ptsPerInch },
@@ -67,8 +58,8 @@ export const text: PDFComponent<
 	const maxWidth = width * ptsPerInch;
 	const lines = indentedBreakTextIntoLines(
 		data,
-		maxWidth - firstLineIndent * ptsPerInch,
 		maxWidth,
+		indents.map((v) => v * ptsPerInch),
 		textWidth,
 	);
 	if (lines.length > maxLines)
@@ -76,10 +67,10 @@ export const text: PDFComponent<
 			`Too many lines in text: ${data} split into ${lines.length} lines of ${maxLines}`,
 		);
 
-	for (let line = 0; line < lines.length; line++) {
+	for (let line = 0; line < lines.length && line < maxLines; line++) {
 		const w = textWidth(lines[line]);
 		const offset = calcAlignment[align](maxWidth - w);
-		const lineX = line === 0 ? x + firstLineIndent : x;
+		const lineX = x + (indents[line] ?? 0);
 		page.drawText(lines[line], {
 			x: lineX * ptsPerInch + offset,
 			y: (y - line * lineHeight) * ptsPerInch,
@@ -91,22 +82,26 @@ export const text: PDFComponent<
 
 function indentedBreakTextIntoLines(
 	data: string,
-	firstLineWidth: number,
-	otherLineWidth: number,
+	baseLineWidth: number,
+	decreasedWidths: number[],
 	textWidth: (t: string) => number,
 ) {
-	const initialBreaks = breakTextIntoLines(
-		data,
-		wordBreaks,
-		firstLineWidth,
-		textWidth,
-	);
-	if (initialBreaks.length < 2) return initialBreaks;
-	const remainingLineBreaks = breakTextIntoLines(
-		initialBreaks.slice(1).join(''),
-		wordBreaks,
-		otherLineWidth,
-		textWidth,
-	);
-	return [initialBreaks[0], ...remainingLineBreaks];
+	let line = 0;
+	const result: string[] = [];
+	while (data.length > 0) {
+		const lines = breakTextIntoLines(
+			data,
+			wordBreaks,
+			baseLineWidth - (decreasedWidths[line] ?? 0),
+			textWidth,
+		);
+		if (line > decreasedWidths.length) {
+			result.push(...lines);
+			break;
+		}
+		if (lines.length > 0) result.push(lines[0]);
+		data = lines.slice(1).join('');
+		line++;
+	}
+	return result;
 }
