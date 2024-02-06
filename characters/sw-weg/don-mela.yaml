@@ -62,3 +62,9 @@ specialAbilities:
 equipment:
   - datapad
   - personal comlink
+move: 10
+forcePoints: 1
+forceSensitive: false
+darkSidePoints: 0
+characterPoints: 5
+injury: None

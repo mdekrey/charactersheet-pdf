@@ -348,3 +348,39 @@ pages:
       lineHeight: 0.1958
       size: 8
       additionalLineIndent: 0.05
+
+  # Lower-left stats
+  - label: Move
+    type: text
+    data: $.move
+    parameters:
+      x: 1.75
+      y: 1.72
+      width: 0.5
+      size: 14
+      maxLines: 1
+  - label: Force Points
+    type: text
+    data: $.forcePoints
+    parameters:
+      x: 2.1
+      y: 1.55
+      width: 0.5
+      size: 14
+      maxLines: 1
+  - label: Force Sensitive (Yes)
+    type: x
+    data: $.forceSensitive === true
+    parameters:
+      x: 2.27
+      y: 1.42
+      width: 0.1
+      height: 0.1
+  - label: Force Sensitive (No)
+    type: x
+    data: $.forceSensitive === false
+    parameters:
+      x: 2.682
+      y: 1.41
+      width: 0.1
+      height: 0.1
