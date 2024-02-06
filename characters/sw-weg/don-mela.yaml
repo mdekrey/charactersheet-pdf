@@ -55,3 +55,10 @@ abilities:
       - Comp. Program/Rep: 5D
       - 'S: Imperial Systems': 7D
       - Droid. Program/Rep: 5D
+specialAbilities:
+  # TODO: Also, temp data
+  - Control (1D), Sense (1D), Alter (1D)
+  - Telekinesis, Alter Mind
+equipment:
+  - datapad
+  - personal comlink

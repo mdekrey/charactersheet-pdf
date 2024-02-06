@@ -323,3 +323,28 @@ pages:
         size: 10
         align: right
 
+  # Special Abilities / Equipment
+  - label: Special Abilities
+    type: list
+    data: |
+      $.specialAbilities
+    parameters:
+      x: 6.21
+      y: 6.21
+      width: 1.47
+      maxLines: 10
+      lineHeight: 0.1958
+      size: 8
+      additionalLineIndent: 0.05
+  - label: Equipment
+    type: list
+    data: |
+      $.equipment
+    parameters:
+      x: 6.21
+      y: 3.95
+      width: 1.47
+      maxLines: 10
+      lineHeight: 0.1958
+      size: 8
+      additionalLineIndent: 0.05

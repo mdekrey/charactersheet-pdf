@@ -59,12 +59,12 @@ export const table: PDFComponent<TableParameters, string[][]> = (
 	}
 
 	let additionalLines = 0;
-	for (
-		let row = 0;
-		row + additionalLines < maxLines && row < data.length;
-		row++
-	) {
+	for (let row = 0; row < data.length; row++) {
 		const line = additionalLines + row;
+		if (line >= maxLines) {
+			console.warn(`Too many lines in list: ${data.join(', ')}`);
+			break;
+		}
 		for (let col = 0; col < fullColumns.length; col++) {
 			const { additionalLineIndent } = fullColumns[col];
 			const indents =
