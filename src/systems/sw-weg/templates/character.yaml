@@ -1,6 +1,7 @@
 blankSheet: ./character-sheet.pdf
 pages:
 - instructions:
+  # Left Column
   - label: Character Template
     type: text
     data: $.template
@@ -95,6 +96,7 @@ pages:
       maxLines: 8
       lineHeight: 0.188
       indents: [2.29, 1.5, 1.5]
+  # Right Column
   - label: Personality
     type: text
     data: $.personality
@@ -139,4 +141,185 @@ pages:
       maxLines: 2
       lineHeight: 0.1885
       indents: []
+
+  # Abilities
+  - label: Dexterity
+    type: text
+    data: $.abilities.dexterity.score
+    parameters:
+      x: 1.195
+      y: 6.39
+      width: 1.45
+      size: 14
+      maxLines: 1
+      indents: [0.975]
+      align: center
+  - label: Dex skills
+    type: table
+    data: |
+      $.abilities.dexterity.skills
+        .flatMap(s => Object.entries(s))
+    parameters:
+      x: 1.195
+      y: 6.2
+      width: 1.45
+      maxLines: 10
+      lineHeight: 0.1958
+      columns:
+      - width: 1.00
+        size: 8
+        additionalLineIndent: 0.05
+      - width: 0.40
+        size: 10
+        align: right
+
+  - label: Knowldege
+    type: text
+    data: $.abilities.knowledge.score
+    parameters:
+      x: 2.75
+      y: 6.39
+      width: 1.63
+      size: 14
+      maxLines: 1
+      indents: [1.155]
+      align: center
+  - label: Kno skills
+    type: table
+    data: |
+      $.abilities.knowledge.skills
+        .flatMap(s => Object.entries(s))
+    parameters:
+      x: 2.75
+      y: 6.2
+      width: 1.63
+      maxLines: 10
+      lineHeight: 0.1958
+      columns:
+      - width: 1.18
+        size: 8
+        additionalLineIndent: 0.05
+      - width: 0.40
+        size: 10
+        align: right
+
+  - label: Mechanical
+    type: text
+    data: $.abilities.mechanical.score
+    parameters:
+      x: 4.48
+      y: 6.39
+      width: 1.63
+      size: 14
+      maxLines: 1
+      indents: [1.155]
+      align: center
+  - label: Mec skills
+    type: table
+    data: |
+      $.abilities.mechanical.skills
+        .flatMap(s => Object.entries(s))
+    parameters:
+      x: 4.48
+      y: 6.2
+      width: 1.63
+      maxLines: 10
+      lineHeight: 0.1958
+      columns:
+      - width: 1.18
+        size: 8
+        additionalLineIndent: 0.05
+      - width: 0.40
+        size: 10
+        align: right
+
+  - label: Perception
+    type: text
+    data: $.abilities.perception.score
+    parameters:
+      x: 1.195
+      y: 4.14
+      width: 1.45
+      size: 14
+      maxLines: 1
+      indents: [0.975]
+      align: center
+  - label: Per skills
+    type: table
+    data: |
+      $.abilities.perception.skills
+        .flatMap(s => Object.entries(s))
+    parameters:
+      x: 1.195
+      y: 3.93
+      width: 1.45
+      maxLines: 10
+      lineHeight: 0.1958
+      columns:
+      - width: 1.00
+        size: 8
+        additionalLineIndent: 0.05
+      - width: 0.40
+        size: 10
+        align: right
+
+  - label: Strength
+    type: text
+    data: $.abilities.strength.score
+    parameters:
+      x: 2.75
+      y: 4.1375
+      width: 1.63
+      size: 14
+      maxLines: 1
+      indents: [1.155]
+      align: center
+  - label: Str skills
+    type: table
+    data: |
+      $.abilities.strength.skills
+        .flatMap(s => Object.entries(s))
+    parameters:
+      x: 2.75
+      y: 3.935
+      width: 1.63
+      maxLines: 10
+      lineHeight: 0.1958
+      columns:
+      - width: 1.18
+        size: 8
+        additionalLineIndent: 0.05
+      - width: 0.40
+        size: 10
+        align: right
+
+  - label: Technical
+    type: text
+    data: $.abilities.technical.score
+    parameters:
+      x: 4.48
+      y: 4.14
+      width: 1.63
+      size: 14
+      maxLines: 1
+      indents: [1.155]
+      align: center
+  - label: Tec skills
+    type: table
+    data: |
+      $.abilities.technical.skills
+        .flatMap(s => Object.entries(s))
+    parameters:
+      x: 4.48
+      y: 3.945
+      width: 1.63
+      maxLines: 10
+      lineHeight: 0.1958
+      columns:
+      - width: 1.18
+        size: 8
+        additionalLineIndent: 0.05
+      - width: 0.40
+        size: 10
+        align: right
 

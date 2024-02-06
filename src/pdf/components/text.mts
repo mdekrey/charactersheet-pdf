@@ -1,38 +1,26 @@
-import { rgb, LineCapStyle, breakTextIntoLines } from 'pdf-lib';
-import { PDFComponent } from './types.mjs';
+import { rgb, LineCapStyle, breakTextIntoLines, PDFPage } from 'pdf-lib';
+import { PDFComponent, PDFComponentContext } from './types.mjs';
 import { ptsPerInch } from '../../pdf-info.mjs';
+import { calcAlignment } from './utils/calcAlignment.mjs';
 
 const wordBreaks = [' '];
 
-const calcAlignment = {
-	left() {
-		return 0;
-	},
-	center(extraSpace: number) {
-		return extraSpace / 2;
-	},
-	right(extraSpace: number) {
-		return extraSpace;
-	},
+export type TextParameters = {
+	x: number;
+	y: number;
+	width: number;
+	size: number;
+	lineHeight?: number;
+	maxLines?: number;
+	indents?: number[];
+	align?: keyof typeof calcAlignment;
 };
 
-export const text: PDFComponent<
-	{
-		x: number;
-		y: number;
-		width: number;
-		size: number;
-		lineHeight?: number;
-		maxLines?: number;
-		indents?: number[];
-		align?: keyof typeof calcAlignment;
-	},
-	string
-> = (
+export const text: PDFComponent<TextParameters, string> = (
 	page,
 	data,
 	{ x, y, width, size, lineHeight, maxLines = 1, align = 'left', indents = [] },
-	{ font },
+	context,
 	{ debug },
 ) => {
 	lineHeight ??= 1.4 * size;
@@ -52,6 +40,48 @@ export const text: PDFComponent<
 		}
 	}
 
+	drawBoundedLines(
+		page,
+		{
+			data,
+			size,
+			width,
+			indents,
+			maxLines,
+			align,
+			x,
+			y,
+			lineHeight,
+		},
+		context,
+	);
+};
+
+export function drawBoundedLines(
+	page: PDFPage,
+	{
+		data,
+		size,
+		width,
+		indents,
+		maxLines,
+		align,
+		x,
+		y,
+		lineHeight,
+	}: {
+		data: string;
+		size: number;
+		width: number;
+		indents: number[];
+		maxLines: number;
+		align: keyof typeof calcAlignment;
+		x: number;
+		y: number;
+		lineHeight: number;
+	},
+	{ font }: PDFComponentContext,
+) {
 	if (typeof data !== 'string') data = `${(data as string) ?? ''}`;
 
 	const textWidth = (t: string) => font.widthOfTextAtSize(t, size);
@@ -68,9 +98,10 @@ export const text: PDFComponent<
 		);
 
 	for (let line = 0; line < lines.length && line < maxLines; line++) {
+		const indent = indents[line] ?? 0;
 		const w = textWidth(lines[line]);
-		const offset = calcAlignment[align](maxWidth - w);
-		const lineX = x + (indents[line] ?? 0);
+		const offset = calcAlignment[align](maxWidth - indent * ptsPerInch - w);
+		const lineX = x + indent;
 		page.drawText(lines[line], {
 			x: lineX * ptsPerInch + offset,
 			y: (y - line * lineHeight) * ptsPerInch,
@@ -78,7 +109,8 @@ export const text: PDFComponent<
 			font,
 		});
 	}
-};
+	return lines;
+}
 
 function indentedBreakTextIntoLines(
 	data: string,

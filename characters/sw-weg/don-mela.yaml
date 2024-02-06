@@ -25,7 +25,33 @@ quote: >-
 # connections: >-
 #   TODO
 abilities:
+  # TODO: these are just random skills to test layout
   dexterity:
     score: 2D+2
     skills:
       - Dodge: 3D+2
+      - Blaster: 3D
+        'S: Blaster Pistols': 5D
+  knowledge:
+    score: 3D
+    skills:
+      - Languages: ''
+  mechanical:
+    score: 3D
+    skills:
+      - Starship Gunnery: 4D
+  perception:
+    score: 3D
+    skills:
+      - Persuasion: ''
+      - Bargain: 4D
+  strength:
+    score: 3D
+    skills:
+      - Brawl: ''
+  technical:
+    score: 3D
+    skills:
+      - Comp. Program/Rep: 5D
+      - 'S: Imperial Systems': 7D
+      - Droid. Program/Rep: 5D
