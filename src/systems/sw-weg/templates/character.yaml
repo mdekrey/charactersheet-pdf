@@ -384,3 +384,64 @@ pages:
       y: 1.41
       width: 0.1
       height: 0.1
+  - label: Dark Side Points (1)
+    type: x
+    data: $.darkSidePoints >= 1
+    parameters:
+      x: 2.35
+      y: 1.24
+      width: 0.1
+      height: 0.1
+  - label: Dark Side Points (2)
+    type: x
+    data: $.darkSidePoints >= 2
+    parameters:
+      x: 2.49
+      y: 1.24
+      width: 0.1
+      height: 0.1
+  - label: Dark Side Points (3)
+    type: x
+    data: $.darkSidePoints >= 3
+    parameters:
+      x: 2.62
+      y: 1.24
+      width: 0.1
+      height: 0.1
+  - label: Dark Side Points (4)
+    type: x
+    data: $.darkSidePoints >= 4
+    parameters:
+      x: 2.75
+      y: 1.24
+      width: 0.1
+      height: 0.1
+  - label: Dark Side Points (5)
+    type: x
+    data: $.darkSidePoints >= 5
+    parameters:
+      x: 2.885
+      y: 1.24
+      width: 0.1
+      height: 0.1
+  - label: Dark Side Points (6)
+    type: x
+    data: $.darkSidePoints >= 6
+    parameters:
+      x: 3.02
+      y: 1.24
+      width: 0.1
+      height: 0.1
+  - label: Character Points
+    type: text
+    data: $.characterPoints
+    parameters:
+      x: 2.35
+      y: 1.05
+      width: 0.5
+      size: 14
+      maxLines: 1
+  # TODO: wounds?
+
+  # Weapons
+  # TODO
