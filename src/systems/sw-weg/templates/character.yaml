@@ -81,7 +81,7 @@ pages:
       x: 2.68
       y: 9.05
       width: 2.58
-      size: 12
+      size: 10
       maxLines: 5
       lineHeight: 0.1885
       indents: [1.25]
@@ -92,7 +92,7 @@ pages:
       x: 1.18
       y: 8.104
       width: 4.08
-      size: 12
+      size: 10
       maxLines: 8
       lineHeight: 0.188
       indents: [2.29, 1.5, 1.5]
@@ -104,7 +104,7 @@ pages:
       x: 5.34
       y: 10
       width: 2.33
-      size: 12
+      size: 10
       maxLines: 8
       lineHeight: 0.1885
       indents: [0.72]
@@ -115,7 +115,7 @@ pages:
       x: 5.34
       y: 8.488
       width: 2.33
-      size: 12
+      size: 10
       maxLines: 4
       lineHeight: 0.1885
       indents: [0.68]
@@ -126,7 +126,7 @@ pages:
       x: 5.34
       y: 7.73
       width: 2.33
-      size: 12
+      size: 10
       maxLines: 3
       lineHeight: 0.1885
       indents: [0.58]
@@ -137,7 +137,7 @@ pages:
       x: 5.34
       y: 6.98
       width: 2.33
-      size: 12
+      size: 10
       maxLines: 2
       lineHeight: 0.1885
       indents: []
@@ -357,7 +357,7 @@ pages:
       x: 1.75
       y: 1.72
       width: 0.5
-      size: 14
+      size: 10
       maxLines: 1
   - label: Force Points
     type: text
@@ -366,7 +366,7 @@ pages:
       x: 2.1
       y: 1.55
       width: 0.5
-      size: 14
+      size: 10
       maxLines: 1
   - label: Force Sensitive (Yes)
     type: x
@@ -439,9 +439,50 @@ pages:
       x: 2.35
       y: 1.05
       width: 0.5
-      size: 14
+      size: 10
       maxLines: 1
   # TODO: wounds?
 
   # Weapons
-  # TODO
+  - label: Weapons
+    type: table
+    data: |
+      $.weapons
+        .flatMap(w => w)
+        .map(w => [w.name, w.damage, w.difficulty, w.short, w.medium, w.long, w.ammo])
+    parameters:
+      x: 3.3
+      y: 1.67
+      # y: 1.72
+      width: 4.38
+      maxLines: 8
+      lineHeight: 0.16
+      columns:
+      - width: 1.565
+        size: 8
+        additionalLineIndent: 0.05
+        # damage
+      - width: 0.44
+        size: 8
+        align: center
+        # difficulty
+      - width: 0.52
+        size: 8
+        align: center
+        # short
+      - width: 0.3
+        size: 8
+        align: center
+        # medium
+      - width: 0.44
+        size: 8
+        align: center
+        # long
+      - width: 0.28
+        size: 8
+        align: center
+        # ammo
+      - width: 0.325
+        size: 8
+        align: center
+

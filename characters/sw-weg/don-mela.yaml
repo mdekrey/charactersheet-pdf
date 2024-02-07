@@ -68,3 +68,14 @@ forceSensitive: false
 darkSidePoints: 0
 characterPoints: 5
 injury: None
+weapons:
+  - name: Heavy Blaster Pistol
+    damage: 5D
+    short: 5-10
+    medium: 20
+    long: 100
+    ammo: 50
+  - name: Vibroblade
+    damage: STR+2D
+    difficulty: E
+
