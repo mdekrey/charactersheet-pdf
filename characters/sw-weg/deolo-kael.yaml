@@ -1,0 +1,104 @@
+template: Survivor Jedi
+name: Deolo Kael
+player: null
+species: Twi'lek
+sex: null
+age: 28
+height: 1.8
+weight: 65
+physicalDescription: >-
+  Orange skin. Deolo has shunned the robes of the Jedi in favor of a
+  form-fitting tunic. Deolo's lightsaber is kept easy to reach under a jacket
+  usually worn at the him.
+background: >-
+  The Jedi Order was always a part of Deolo's life. However, during the Clone
+  Wars Deolo was usually found without any clones deep in the Outer Rim
+  territories, chasing down a lost relic, tugging at the mysteries of the force.
+  It is no real wonder, then, that Deolo was not an immediate casualty of Order
+  66. Deolo's connection to the Force is still strained from the trauma of
+  losing so many friends and mentors.
+personality: >-
+  Warm and jovial most of the time. When thoughts turn to the force, Deolo feels
+  the cold strength of the Dark Side during this era, and so becomes solumn and
+  sullen. Deolo feels an immense amount of guilt, but hopes the Force has a
+  destiny in store.
+objectives: >-
+  To keep the balance of the Force from falling to the Dark Side. To unravel
+  more mysteries of the ancient Jedi.
+quote: >-
+  Trust in the Force.
+connections: >-
+  Avery: Trustworthy Senator. Quinlan Vos: Master.
+abilities:
+  dexterity:
+    score: 2D+2
+    skills:
+      - Blaster: 3D
+      - Brawling Parry: ''
+      - Dodge: 3D+2
+      - Lightsaber: 4D+2
+      - Melee Combat: ''
+      - Melee Parry: ''
+  knowledge:
+    score: 3D+1
+    skills:
+      - Streetwise: ''
+      - Planetary Systems: ''
+      - Alien Species: ''
+      - Languages: ''
+      - Survival: ''
+  mechanical:
+    score: 2D
+    skills:
+      - Astrogation: ''
+      - Repulsorlift Operation: ''
+      - Space Transports: ''
+      - Starship Shields: ''
+      - Starship Gunnery: ''
+  perception:
+    score: 3D+1
+    skills:
+      - Bargain: ''
+      - Con: 4D
+      - Gambling: ''
+      - Search: ''
+      - Sneak: 4D
+  strength:
+    score: 2D+2
+    skills:
+      - Brawling: ''
+      - Climbing/Jumping: 4D
+      - Stamina: ''
+  technical:
+    score: 2D
+    skills:
+      - Computer Prog/Rep: ''
+      - Droid Programming: ''
+      - Droid Repair: ''
+      - First Aid: ''
+      - Sp. Transports Repair: ''
+specialAbilities:
+  - 'Control: 2D. Sense: 1D.'
+  - >-
+    Force Powers: Enhance Attribute (p155). Lightsaber Combat (p165).
+  - Deolo has more powers/skill than these, but is blocked.
+  - (+2D for activating any Force Power during restoration.)
+equipment:
+  - 250 Credits
+  - Comlink
+move: 10
+forcePoints: 2
+forceSensitive: true
+darkSidePoints: 0
+characterPoints: 5
+injury: None
+weapons:
+  - name: Lightsaber
+    damage: 5D
+    difficulty: M
+  - name: Blaster Pistol
+    damage: 4D
+    short: 3-10
+    medium: 30
+    long: 120
+    ammo: 100

@@ -25,57 +25,59 @@ quote: >-
 # connections: >-
 #   TODO
 abilities:
-  # TODO: these are just random skills to test layout
   dexterity:
-    score: 2D+2
+    score: ''
     skills:
-      - Dodge: 3D+2
-      - Blaster: 3D
-        'S: Blaster Pistols': 5D
+      - Blaster: ''
+      - Brawling Parry: ''
+      - Dodge: ''
+      - Melee Combat: ''
+      - Melee Parry: ''
   knowledge:
-    score: 3D
+    score: ''
     skills:
+      - Streetwise: ''
+      - Planetary Systems: ''
+      - Alien Species: ''
       - Languages: ''
+      - Survival: ''
   mechanical:
-    score: 3D
+    score: ''
     skills:
-      - Starship Gunnery: 4D
+      - Astrogation: ''
+      - Repulsorlift Operation: ''
+      - Space Transports: ''
+      - Starship Shields: ''
+      - Starship Gunnery: ''
   perception:
-    score: 3D
+    score: ''
     skills:
-      - Persuasion: ''
-      - Bargain: 4D
+      - Bargain: ''
+      - Con: ''
+      - Gambling: ''
+      - Search: ''
+      - Sneak: ''
   strength:
-    score: 3D
+    score: ''
     skills:
-      - Brawl: ''
+      - Brawling: ''
+      - Climbing/Jumping: ''
+      - Stamina: ''
   technical:
-    score: 3D
+    score: ''
     skills:
-      - Comp. Program/Rep: 5D
-      - 'S: Imperial Systems': 7D
-      - Droid. Program/Rep: 5D
-specialAbilities:
-  # TODO: Also, temp data
-  - Control (1D), Sense (1D), Alter (1D)
-  - Telekinesis, Alter Mind
-equipment:
-  - datapad
-  - personal comlink
+      - Computer Prog/Rep: ''
+      - Droid Programming: ''
+      - Droid Repair: ''
+      - First Aid: ''
+      - Sp. Transports Repair: ''
+specialAbilities: []
+equipment: []
 move: 10
-forcePoints: 1
-forceSensitive: false
+forcePoints: 2
+forceSensitive: true
 darkSidePoints: 0
 characterPoints: 5
 injury: None
-weapons:
-  - name: Heavy Blaster Pistol
-    damage: 5D
-    short: 5-10
-    medium: 20
-    long: 100
-    ammo: 50
-  - name: Vibroblade
-    damage: STR+2D
-    difficulty: E
+weapons: []
 

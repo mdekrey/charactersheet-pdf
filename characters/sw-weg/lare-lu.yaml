@@ -80,6 +80,7 @@ abilities:
 specialAbilities:
   - 'Starship Intuition: additional mechanical skills at character creation'
 equipment:
+  - 2000 Credits
   - Heavy Blaster Pistol
   - Personal Comlink
 move: 10

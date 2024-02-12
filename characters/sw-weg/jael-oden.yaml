@@ -1,0 +1,95 @@
+template: Tongue-tied Engineer
+name: Jael Oden
+player: null
+species: Human
+sex: null
+age: 25
+height: 1.7
+weight: 59
+physicalDescription: >-
+  Cropped hair, comfortable shirt. Leather jacket, with plenty of loops on the
+  sleeve for attaching tools and code cynlinders. Well-stocked toolbelt.
+background: >-
+  Jael met Lare for a job a while back and they've kept that going on-and-off
+  for many months. Jael prefers working with tools than whatever danger Lare
+  gets them into, but it does pay better than most jobs.
+personality: >-
+  Jael prefers actions over talk; Jael will often do things without explanation,
+  and doesn't elaborate on things with partial knowledge. Things beyond
+  explanation - well, those Jael must study and understand.
+objectives: >-
+  Unravel mysteries. Show that blasters don't always have to be the solution.
+quote: >-
+  I didn't mention it before because I didn't know. Now I do.
+connections: >-
+  Lare Lu: regular employer. BX-73: A work-in-progress project.
+abilities:
+  dexterity:
+    score: 2D
+    skills:
+      - Blaster: 2D+1
+      - Brawling Parry: ''
+      - Dodge: 3D
+      - Melee Combat: ''
+      - Melee Parry: ''
+  knowledge:
+    score: 3D+2
+    skills:
+      - Streetwise: ''
+      - Planetary Systems: ''
+      - Alien Species: ''
+      - Languages: ''
+      - Survival: ''
+      - Willpower: 4D
+  mechanical:
+    score: 3D+2
+    skills:
+      - Astrogation: ''
+      - Repulsorlift Operation: ''
+      - Space Transports: ''
+      - Starship Shields: 4D
+      - Starship Gunnery: 4D+1
+      - Sensors: 4D+1
+  perception:
+    score: 2D+1
+    skills:
+      - Bargain: ''
+      - Con: ''
+      - Gambling: ''
+      - Search: ''
+      - Sneak: 3D
+  strength:
+    score: 2D+1
+    skills:
+      - Brawling: ''
+      - Climbing/Jumping: 3D
+      - Stamina: ''
+  technical:
+    score: 4D
+    skills:
+      - Computer Prog/Rep: 5D
+      - Droid Programming: 4D+1
+      - Droid Repair: ''
+      - First Aid: ''
+      - Security: 5D
+      - Sp. Transports Repair: ''
+specialAbilities: []
+equipment:
+  - 1000 Credits
+  - Personal Computer w/ scomp-link
+  - Datapad
+  - Personal Com-link
+  - Toolkit
+move: 10
+forcePoints: 2
+forceSensitive: true
+darkSidePoints: 0
+characterPoints: 5
+injury: None
+weapons:
+  - name: Blaster Pistol
+    damage: 4D
+    short: 3-10
+    medium: 30
+    long: 120
+    ammo: 100
