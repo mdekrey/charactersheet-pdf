@@ -1,0 +1,97 @@
+template: Scoundrel Captain
+name: Lare Lu
+# player: null
+species: Duros
+# sex: M
+age: 32
+height: 2.0
+weight: 90
+physicalDescription: >-
+  Lare cuts an imposing figure with blue-grey skin and red eyes. Lare dresses
+  the part of a fringe world freight captain but every piece is carefully
+  tailored.
+background: >-
+  During the Republic, Lare would offer discrete transport for senators and Jedi
+  alike to Outer Rim or other territories. Earning a solid reputation meant that
+  Lare was on a longer term contract with Jedi Knight Deolo Kael when Order 66
+  was issued, putting Lare squarely at odds the Empire. Never wanting to turn
+  down good money means being flexible, and this is just one more twist.
+personality: >-
+  Lare believes strongly in commitment to client confidentiality and completing
+  a job once accepted... negotiating additional pay for additional services, or
+  at the very least returning the client to safety.
+objectives: >-
+  Complete the job, grow my reputation, establish regular clients.
+quote: >-
+  So long as the money is good, count me in.
+connections: >-
+  Avery's mentor, Reo Tol: Long-term client. Jael Oden and BX-73: Crew.
+abilities:
+  dexterity:
+    score: 3D+1
+    skills:
+      # 2D+1 spent
+      - Blaster: 4D+2
+      - Brawling Parry: ''
+      - Dodge: 4D+1
+      - Melee Combat: ''
+      - Melee Parry: ''
+  knowledge:
+    score: 1D+2
+    skills:
+      # 1D+2 spent
+      - Streetwise: 3D
+      - Planetary Systems: 2D
+      - Alien Species: ''
+      - Languages: ''
+      - Survival: ''
+  mechanical:
+    score: 4D+2
+    skills:
+      # 2D spent
+      - Astrogation: 5D+1
+      - Repulsorlift Operation: ''
+      - Space Transports: 6D
+      - Starship Shields: 5D+1
+      - Starship Gunnery: 6D
+  perception:
+    score: 2D+2
+    skills:
+      # 1D spent
+      - Bargain: 3D+1
+      - Con: 3D
+      - Gambling: ''
+      - Search: ''
+      - Sneak: ''
+  strength:
+    score: 3D
+    skills:
+      - Brawling: ''
+      - Climbing/Jumping: ''
+      - Stamina: ''
+  technical:
+    score: 2D+2
+    skills:
+      - Computer Prog/Rep: ''
+      - Droid Programming: ''
+      - Droid Repair: ''
+      - First Aid: ''
+      - Sp. Transports Repair: ''
+specialAbilities:
+  - 'Starship Intuition: additional mechanical skills at character creation'
+equipment:
+  - Heavy Blaster Pistol
+  - Personal Comlink
+move: 10
+forcePoints: 1
+forceSensitive: false
+darkSidePoints: 0
+characterPoints: 5
+injury: None
+weapons:
+  - name: Heavy Blaster Pistol
+    damage: 5D
+    short: 5-10
+    medium: 20
+    long: 100
+    ammo: 50

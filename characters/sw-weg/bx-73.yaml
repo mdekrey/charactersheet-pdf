@@ -1,0 +1,98 @@
+template: Battle Droid
+name: BX-73
+player: null
+species: BX Series Battle Droid
+sex: null
+age: N/A
+height: 1.8
+weight: 65
+physicalDescription: >-
+  BX-73 appears as a standard BX-series droid with a black-and-gold paint job
+  that looks slightly worn.
+background: >-
+  BX-73 was captured thanks to the shutdown command coinciding with Order 66.
+  After a crude reprogramming by Jael, BX-73 no longer served the Confederacy,
+  but needs to readjust its programming to return to its former prowess.
+personality: >-
+  Having confidence in one's skills requires knowing one's limits... and BX-73
+  is not sure which skills remain and which must be rebuilt. Ready to put skills
+  to the test, BX-73 will gain more confidence as experience is earned.
+objectives: >-
+  Test my skills, re-assert my programming.
+quote: >-
+  My armaments are prepared for a ground confrontation.
+connections: >-
+  Jael Oden: Freedom-maker. Lare Lu: Captain.
+abilities:
+  dexterity:
+    score: 3D
+    skills:
+      - Blaster: 5D
+      - Brawling Parry: 4D+2
+      - Dodge: 4D+2
+      - Grenade: 4D
+      - Melee Combat: ''
+      - Melee Parry: 4D+2
+  knowledge:
+    score: 1D
+    skills:
+      - Streetwise: ''
+      - Planetary Systems: ''
+      - Alien Species: ''
+      - Languages: ''
+      - Survival: ''
+  mechanical:
+    score: 1D
+    skills:
+      - Astrogation: ''
+      - Repulsorlift Operation: ''
+      - Space Transports: ''
+      - Starship Shields: ''
+      - Starship Gunnery: ''
+  perception:
+    score: 2D
+    skills:
+      - Bargain: ''
+      - Con: ''
+      - Gambling: ''
+      - Search: 4D
+      - Sneak: 4D
+  strength:
+    score: 2D
+    skills:
+      - Brawling: 4D
+      - Climbing/Jumping: ''
+      - Stamina: ''
+      - (Armor vs Energy): +1D
+  technical:
+    score: 1D
+    skills:
+      - Computer Prog/Rep: ''
+      - Droid Programming: ''
+      - Droid Repair: ''
+      - First Aid: ''
+      - Sp. Transports Repair: ''
+specialAbilities: []
+equipment:
+  - Humanoid body
+  - Low-light vision
+  - Internal comlink
+  - Vocabulator
+  - Armor (+1D vs energy attacks)
+  - Electrobinoculars
+move: 10
+forcePoints: 1
+forceSensitive: false
+darkSidePoints: 0
+characterPoints: 5
+injury: None
+weapons:
+  - name: Blaster Rifle
+    damage: 5D
+    short: 3-30
+    medium: 100
+    long: 300
+    ammo: 100
+  - name: Vibrosword
+    damage: STR+3D
+    difficulty: M

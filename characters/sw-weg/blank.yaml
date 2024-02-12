@@ -1,0 +1,76 @@
+template: ''
+name: ''
+player: null
+species: ''
+sex: null
+age: ''
+height: ''
+weight: ''
+physicalDescription: >-
+background: >-
+personality: >-
+objectives: >-
+quote: >-
+connections: >-
+abilities:
+  dexterity:
+    score: ''
+    skills:
+      - Blaster: ''
+      - Brawling Parry: ''
+      - Dodge: ''
+      - Melee Combat: ''
+      - Melee Parry: ''
+  knowledge:
+    score: ''
+    skills:
+      - Streetwise: ''
+      - Planetary Systems: ''
+      - Alien Species: ''
+      - Languages: ''
+      - Survival: ''
+  mechanical:
+    score: ''
+    skills:
+      - Astrogation: ''
+      - Repulsorlift Operation: ''
+      - Space Transports: ''
+      - Starship Shields: ''
+      - Starship Gunnery: ''
+  perception:
+    score: ''
+    skills:
+      - Bargain: ''
+      - Con: ''
+      - Gambling: ''
+      - Search: ''
+      - Sneak: ''
+  strength:
+    score: ''
+    skills:
+      - Brawling: ''
+      - Climbing/Jumping: ''
+      - Stamina: ''
+  technical:
+    score: ''
+    skills:
+      - Computer Prog/Rep: ''
+      - Droid Programming: ''
+      - Droid Repair: ''
+      - First Aid: ''
+      - Sp. Transports Repair: ''
+specialAbilities: []
+equipment: []
+move: 10
+forcePoints: 1
+forceSensitive: false
+darkSidePoints: 0
+characterPoints: 5
+injury: None
+weapons:
+  - name: Heavy Blaster Pistol
+    damage: 5D
+    short: 5-10
+    medium: 20
+    long: 100
+    ammo: 50
