@@ -47,6 +47,8 @@ export const list: PDFComponent<ListParameters, string[]> = (
 		}
 	}
 
+	if (!data) return;
+
 	let additionalLines = 0;
 	for (let row = 0; row < data.length; row++) {
 		if (row + additionalLines >= maxLines) {

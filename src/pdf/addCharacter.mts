@@ -10,7 +10,7 @@ import {
 export function addCharacter(
 	pages: PDFPage[],
 	template: TemplateSpec,
-	character: Character,
+	character: Character | null,
 	initialContext: Pick<PDFComponentContext, 'font'>,
 	options: PDFComponentOptions,
 ) {
@@ -19,7 +19,8 @@ export function addCharacter(
 	const context = {
 		...initialContext,
 	};
-	if (debug) pages[0].drawText(character.path, { x: 4, y: 4, size: 10, font });
+	if (debug && character?.path)
+		pages[0].drawText(character.path, { x: 4, y: 4, size: 10, font });
 
 	for (let i = 0; i < template.pages.length; i++) {
 		const templatePage = template.pages[i];
@@ -42,14 +43,22 @@ export function addCharacter(
 				continue;
 			}
 
-			const data = resolveData(character.spec, instruction.data);
+			const data = safeResolveData(character?.spec, instruction.data);
 			component(page, data, instruction.parameters, context, options);
 		}
 	}
 }
 
 /** Safely uses eval to only access the first parameter as `$` */
-function resolveData($: unknown, data: string): unknown {
-	'use strict';
-	return eval(data);
+function safeResolveData($: unknown, data: string): unknown {
+	try {
+		('use strict');
+		return eval(data);
+	} catch (ex) {
+		if ($)
+			console.warn(
+				`Unable to resolve ${data}, due to error: ${ex?.toString()}`,
+			);
+		return undefined;
+	}
 }

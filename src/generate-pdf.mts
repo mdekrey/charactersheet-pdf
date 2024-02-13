@@ -52,8 +52,7 @@ export async function generatePdf({
 		addPdfDebugging(pages, font);
 	}
 
-	if (character?.spec)
-		addCharacter(pages, template.spec, character, { font }, { debug });
+	addCharacter(pages, template.spec, character, { font }, { debug });
 
 	const resultBytes = await pdfDoc.save();
 	return writeFile(output, resultBytes);
