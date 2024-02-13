@@ -30,16 +30,12 @@ abilities:
   dexterity:
     score: 3D+1
     skills:
-      # 2D+1 spent
       - Blaster: 4D+2
       - Brawling Parry: ''
       - Dodge: 4D+1
-      - Melee Combat: ''
-      - Melee Parry: ''
   knowledge:
     score: 1D+2
     skills:
-      # 1D+2 spent
       - Streetwise: 3D
       - Planetary Systems: 2D
       - Alien Species: ''
@@ -48,7 +44,6 @@ abilities:
   mechanical:
     score: 4D+2
     skills:
-      # 2D spent
       - Astrogation: 5D+1
       - Repulsorlift Operation: ''
       - Space Transports: 6D
@@ -57,7 +52,6 @@ abilities:
   perception:
     score: 2D+2
     skills:
-      # 1D spent
       - Bargain: 3D+1
       - Con: 3D
       - Gambling: ''
@@ -72,9 +66,6 @@ abilities:
   technical:
     score: 2D+2
     skills:
-      - Computer Prog/Rep: ''
-      - Droid Programming: ''
-      - Droid Repair: ''
       - First Aid: ''
       - Sp. Transports Repair: ''
 specialAbilities:

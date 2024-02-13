@@ -60,7 +60,6 @@ abilities:
     skills:
       - Bargain: ''
       - Con: 4D
-      - Gambling: ''
       - Search: ''
       - Sneak: 4D
   strength:
@@ -72,11 +71,7 @@ abilities:
   technical:
     score: 2D
     skills:
-      - Computer Prog/Rep: ''
-      - Droid Programming: ''
-      - Droid Repair: ''
       - First Aid: ''
-      - Sp. Transports Repair: ''
 specialAbilities:
   - 'Control: 2D. Sense: 1D.'
   - >-

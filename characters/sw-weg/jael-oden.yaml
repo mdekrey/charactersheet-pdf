@@ -30,8 +30,6 @@ abilities:
       - Blaster: 2D+1
       - Brawling Parry: ''
       - Dodge: 3D
-      - Melee Combat: ''
-      - Melee Parry: ''
   knowledge:
     score: 3D+2
     skills:
@@ -53,10 +51,6 @@ abilities:
   perception:
     score: 2D+1
     skills:
-      - Bargain: ''
-      - Con: ''
-      - Gambling: ''
-      - Search: ''
       - Sneak: 3D
   strength:
     score: 2D+1

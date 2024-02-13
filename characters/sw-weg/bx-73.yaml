@@ -28,50 +28,32 @@ abilities:
     score: 3D
     skills:
       - Blaster: 5D
-      - Brawling Parry: 4D+2
+      - Brawling Parry: 3D+2
       - Dodge: 4D+2
-      - Grenade: 4D
-      - Melee Combat: ''
+      - Grenade: ''
+      - Melee Combat: 4D+2
       - Melee Parry: 4D+2
   knowledge:
     score: 1D
-    skills:
-      - Streetwise: ''
-      - Planetary Systems: ''
-      - Alien Species: ''
-      - Languages: ''
-      - Survival: ''
+    skills: []
   mechanical:
     score: 1D
-    skills:
-      - Astrogation: ''
-      - Repulsorlift Operation: ''
-      - Space Transports: ''
-      - Starship Shields: ''
-      - Starship Gunnery: ''
+    skills: []
   perception:
     score: 2D
     skills:
-      - Bargain: ''
-      - Con: ''
-      - Gambling: ''
       - Search: 4D
       - Sneak: 4D
   strength:
     score: 2D
     skills:
-      - Brawling: 4D
-      - Climbing/Jumping: ''
+      - Brawling: 3D+1
+      - Climbing/Jumping: 3D
       - Stamina: ''
       - (Armor vs Energy): +1D
   technical:
     score: 1D
-    skills:
-      - Computer Prog/Rep: ''
-      - Droid Programming: ''
-      - Droid Repair: ''
-      - First Aid: ''
-      - Sp. Transports Repair: ''
+    skills: []
 specialAbilities: []
 equipment:
   - Humanoid body
