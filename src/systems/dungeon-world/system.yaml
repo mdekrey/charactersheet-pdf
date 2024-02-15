@@ -1,0 +1,21 @@
+templates:
+  barbarian:
+    path: templates/dungeon-world-barbarian.yaml
+  bard:
+    path: templates/dungeon-world-bard.yaml
+  claric:
+    path: templates/dungeon-world-claric.yaml
+  druid:
+    path: templates/dungeon-world-druid.yaml
+  fighter:
+    path: templates/dungeon-world-fighter.yaml
+  immolator:
+    path: templates/dungeon-world-immolator.yaml
+  paladin:
+    path: templates/dungeon-world-paladin.yaml
+  ranger:
+    path: templates/dungeon-world-ranger.yaml
+  thief:
+    path: templates/dungeon-world-thief.yaml
+  wizard:
+    path: templates/dungeon-world-wizard.yaml
