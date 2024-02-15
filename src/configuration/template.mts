@@ -38,7 +38,7 @@ export async function loadTemplateYaml(
 	templateKey: string | undefined,
 ): Promise<null | MissingTemplate | Template> {
 	templateKey ??= gameSystem.spec.defaultTemplate;
-	if (!gameSystem.spec.templates[templateKey]) return null;
+	if (!templateKey || !gameSystem.spec.templates[templateKey]) return null;
 	const templateYamlPath = constructRelativePath(
 		gameSystem.path,
 		gameSystem.spec.templates[templateKey].path,

@@ -25,9 +25,13 @@ export async function generatePdf({
 	if (!gameSystem.spec)
 		throw new InvalidArgumentError(`Unknown system: ${system}`);
 	const template = await loadTemplateYaml(gameSystem, templateKey);
+	if (!template && !templateKey)
+		throw new InvalidArgumentError(
+			`Template must be provided for system ${system}. Available templates: ${Object.keys(gameSystem.spec.templates).join(', ')}`,
+		);
 	if (!template)
 		throw new InvalidArgumentError(
-			`Template not defined in system: ${templateKey}`,
+			`Template not defined in system: ${templateKey}. Available templates: ${Object.keys(gameSystem.spec.templates).join(', ')}`,
 		);
 	if (!template.spec)
 		throw new InvalidArgumentError(

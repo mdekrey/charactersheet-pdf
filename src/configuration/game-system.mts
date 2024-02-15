@@ -13,7 +13,7 @@ export type GameSystem = {
 };
 
 export type GameSystemSpec = {
-	defaultTemplate: string;
+	defaultTemplate?: string;
 	templates: Record<string, { path: string }>;
 };
 
