@@ -1,3 +1,237 @@
 blankSheet: ./dungeon-world-fighter.pdf
 pages:
-- instructions: []
+- instructions:
+  - label: Name
+    type: text
+    data: $.name
+    parameters:
+      x: 2
+      width: 3.82
+      y: 10.525
+      size: 18
+  - label: Level
+    type: text
+    data: $.level
+    parameters:
+      x: 6.675
+      width: .25
+      y: 10.525
+      size: 18
+      align: center
+  - label: XP
+    type: text
+    data: $.xp
+    parameters:
+      x: 7.4
+      width: .85
+      y: 10.525
+      size: 18
+      align: center
+  - label: Armor
+    type: text
+    data: $.armor
+    parameters:
+      x: 5.14
+      width: .3
+      y: 9.70
+      size: 18
+      align: center
+  - label: HP Max
+    type: text
+    data: $.stats.con.score + 10
+    parameters:
+      x: 5.06
+      width: .22
+      y: 9.18
+      size: 13
+      align: center
+  # stats
+  - label: STR Score
+    type: text
+    data: $.stats.str.score
+    parameters: { x: 2.25, width: .4, y: 7.75, size: 14, align: center }
+  - label: STR Mod
+    type: text
+    data: $.stats.str.mod
+    parameters: { x: 1.5, width: .5, y: 7, size: 30, align: center }
+  - label: DEX Score
+    type: text
+    data: $.stats.dex.score
+    parameters: { x: 3.82, width: .4, y: 7.75, size: 14, align: center }
+  - label: DEX Mod
+    type: text
+    data: $.stats.dex.mod
+    parameters: { x: 3.07, width: .5, y: 7, size: 30, align: center }
+  - label: CON Score
+    type: text
+    data: $.stats.con.score
+    parameters: { x: 5.39, width: .4, y: 7.75, size: 14, align: center }
+  - label: CON Mod
+    type: text
+    data: $.stats.con.mod
+    parameters: { x: 4.64, width: .5, y: 7, size: 30, align: center }
+  - label: INT Score
+    type: text
+    data: $.stats.int.score
+    parameters: { x: 2.25, width: .4, y: 6.5, size: 14, align: center }
+  - label: INT Mod
+    type: text
+    data: $.stats.int.mod
+    parameters: { x: 1.5, width: .5, y: 5.75, size: 30, align: center }
+  - label: WIS Score
+    type: text
+    data: $.stats.wis.score
+    parameters: { x: 3.82, width: .4, y: 6.5, size: 14, align: center }
+  - label: WIS Mod
+    type: text
+    data: $.stats.wis.mod
+    parameters: { x: 3.07, width: .5, y: 5.75, size: 30, align: center }
+  - label: CHA Score
+    type: text
+    data: $.stats.cha.score
+    parameters: { x: 5.39, width: .4, y: 6.5, size: 14, align: center }
+  - label: CHA Mod
+    type: text
+    data: $.stats.cha.mod
+    parameters: { x: 4.64, width: .5, y: 5.75, size: 30, align: center }
+  # alignment
+  - label: Alignment 1
+    type: x
+    data: $.alignment?.toLowerCase() === 'good'
+    parameters:
+      x: 6.08
+      y: 9.4
+      width: 0.2
+      height: 0.2
+  - label: Alignment 2
+    type: x
+    data: $.alignment?.toLowerCase() === 'neutral'
+    parameters:
+      x: 6.08
+      y: 9.01
+      width: 0.2
+      height: 0.2
+  - label: Alignment 3
+    type: x
+    data: $.alignment?.toLowerCase() === 'evil'
+    parameters:
+      x: 6.08
+      y: 8.64
+      width: 0.2
+      height: 0.2
+  #Race
+  - label: Race 1
+    type: x
+    data: $.race?.toLowerCase() === 'dwarf'
+    parameters:
+      x: 6.08
+      y: 4.4
+      width: 0.2
+      height: 0.2
+  - label: Race 2
+    type: x
+    data: $.race?.toLowerCase() === 'elf'
+    parameters:
+      x: 6.08
+      y: 3.77
+      width: 0.2
+      height: 0.2
+  - label: Race 3
+    type: x
+    data: $.race?.toLowerCase() === 'halfling'
+    parameters:
+      x: 6.08
+      y: 3.14
+      width: 0.2
+      height: 0.2
+  - label: Race 4
+    type: x
+    data: $.race?.toLowerCase() === 'human'
+    parameters:
+      x: 6.08
+      y: 2.575
+      width: 0.2
+      height: 0.2
+
+  # Starting moves
+  - label: Signature Weapon as Sword
+    type: x
+    data: $.moves?.['signature-weapon']?.base?.toLowerCase() === 'sword'
+    parameters:
+      x: 1.65
+      y: 3.55
+      width: 0.1
+      height: 0.1
+  - label: Signature Weapon as Spear
+    type: x
+    data: $.moves?.['signature-weapon']?.base?.toLowerCase() === 'spear'
+    parameters:
+      x: 2.60
+      y: 3.55
+      width: 0.1
+      height: 0.1
+  - label: Signature Weapon as Axe
+    type: x
+    data: $.moves?.['signature-weapon']?.base?.toLowerCase() === 'axe'
+    parameters:
+      x: 1.65
+      y: 3.37
+      width: 0.1
+      height: 0.1
+  - label: Signature Weapon as Flail
+    type: x
+    data: $.moves?.['signature-weapon']?.base?.toLowerCase() === 'flail'
+    parameters:
+      x: 2.60
+      y: 3.37
+      width: 0.1
+      height: 0.1
+  - label: Signature Weapon as Hammer
+    type: x
+    data: $.moves?.['signature-weapon']?.base?.toLowerCase() === 'hammer'
+    parameters:
+      x: 1.65
+      y: 3.19
+      width: 0.1
+      height: 0.1
+  - label: Signature Weapon as Fists
+    type: x
+    data: $.moves?.['signature-weapon']?.base?.toLowerCase() === 'fists'
+    parameters:
+      x: 2.60
+      y: 3.19
+      width: 0.1
+      height: 0.1
+  - label: Signature Weapon Range as hand
+    type: x
+    data: $.moves?.['signature-weapon']?.range?.toLowerCase() === 'hand'
+    parameters:
+      x: 1.65
+      y: 2.76
+      width: 0.1
+      height: 0.1
+  - label: Signature Weapon Range as close
+    type: x
+    data: $.moves?.['signature-weapon']?.base?.toLowerCase() === 'close'
+    parameters:
+      x: 2.60
+      y: 2.76
+      width: 0.1
+      height: 0.1
+  - label: Signature Weapon Range as reach
+    type: x
+    data: $.moves?.['signature-weapon']?.range?.toLowerCase() === 'reach'
+    parameters:
+      x: 1.65
+      y: 2.58
+      width: 0.1
+      height: 0.1
+
+  - label: Signature Weapon enhancement hooks
+    type: x
+    data: $.moves?.['signature-weapon']?.enhancements?.includes('hooks')
+    parameters:
+      x: 4.045
+      y: 4.685
+      width: 0.1
+      height: 0.1

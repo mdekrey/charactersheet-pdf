@@ -5,6 +5,7 @@
 	"bin": {},
 	"scripts": {
 		"generate-pdf": "tsx src/index.mts generate",
+		"generate-pdf:watch": "tsx watch src/index.mts generate",
 		"lint": "npm run typecheck && npm run eslint && npm run prettier",
 		"lint:fix": "npm run typecheck && npm run eslint:fix && npm run prettier:fix",
 		"eslint": "eslint \"**/*.{cjs,mjs,js,ts,tsx,mts,cts}\"",
